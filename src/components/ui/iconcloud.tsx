@@ -52,6 +52,7 @@ export const renderCustomIcon = (icon: SimpleIcon, theme: string) => {
       href: undefined,
       target: undefined,
       rel: undefined,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       onClick: (e: any) => e.preventDefault(),
     },
   });
@@ -80,6 +81,7 @@ export function IconCloud({ iconSlugs }: DynamicCloudProps) {
   }, [data, theme]);
 
   return (
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     <Cloud {...cloudProps}>
       <>{renderedIcons}</>

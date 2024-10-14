@@ -5,6 +5,7 @@ import { useRouter, usePathname } from "next/navigation"; // Import usePathname
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false); // State untuk membuka/menutup menu
+  const [scrolling, setScrolling] = useState(false); // State untuk mengatur efek scroll
   const router = useRouter();
   const pathname = usePathname(); // Get current pathname
   const menuRef = useRef<HTMLDivElement>(null); // Ref untuk menu
@@ -37,8 +38,30 @@ const Navbar: React.FC = () => {
     };
   }, [menuRef]);
 
+  // Effect untuk mendeteksi scroll
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true); // Set scrolling to true when scrolled more than 50px
+      } else {
+        setScrolling(false); // Set scrolling to false when at the top
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-transparent fixed w-full z-10">
+    <nav
+      className={`fixed w-full z-10 transition-all duration-300 ${
+        scrolling ? "bg-custom-glass shadow-lg" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
