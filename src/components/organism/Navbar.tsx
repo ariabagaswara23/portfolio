@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
 
   return (
     <nav className="bg-transparent fixed w-full z-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
               className="text-2xl font-bold cursor-pointer text-[#00A6FB]"
               onClick={() => handleNavigation("/")}
             >
-              Aria Bagaswara
+              Aria.
             </span>
           </div>
 
