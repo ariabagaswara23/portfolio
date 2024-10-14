@@ -47,7 +47,7 @@ const Navbar: React.FC = () => {
               className="text-2xl font-bold cursor-pointer text-[#00A6FB]"
               onClick={() => handleNavigation("/")}
             >
-              AB
+              Aria Bagaswara
             </span>
           </div>
 
