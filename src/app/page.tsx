@@ -1,3 +1,4 @@
+import AboutSection from "@/components/organism/AboutSection";
 import Navbar from "@/components/organism/global-components/Navbar";
 import HeroSection from "@/components/organism/HeroSection";
 import Meteors from "@/components/ui/meteors";
@@ -10,11 +11,7 @@ export default function Home() {
       <Navbar />
       <Meteors number={30} />
       <HeroSection />
-      <section id="about" className="w-full">
-        <div className="flex flex-col w-full px-4 sm:px-12 lg:px-24  py-4 h-screen bg-about-section text-white">
-          <h3 className="text-center text-4xl text-[#00A6FB]">About Me</h3>
-        </div>
-      </section>
+      <AboutSection />
     </div>
   );
 }
