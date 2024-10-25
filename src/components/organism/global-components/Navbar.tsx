@@ -77,28 +77,67 @@ const Navbar: React.FC = () => {
           {/* Links untuk desktop */}
           <div className="hidden md:flex space-x-8">
             <span
-              className={`cursor-pointer ${
+              className={`cursor-pointer hover:text-[#0582CA] ${
                 pathname === "/" ? "text-[#00A6FB]" : "text-[#ffffff]"
               }`}
               onClick={() => handleNavigation("/")}
             >
               Home
+              <div
+                className={`flex gap-x-[2px] items-start ${
+                  pathname === "/" ? "" : "hidden"
+                }`}
+              >
+                <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+                {[...Array(3)].map((_, index) => (
+                  <span
+                    key={index}
+                    className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                  ></span>
+                ))}
+              </div>
             </span>
             <span
-              className={`cursor-pointer ${
+              className={`cursor-pointer hover:text-[#0582CA] ${
                 pathname === "/project" ? "text-[#00A6FB]" : "text-[#ffffff]"
               }`}
               onClick={() => handleNavigation("/project")}
             >
               Project
+              <div
+                className={`flex gap-x-[2px] items-start ${
+                  pathname === "/project" ? "" : "hidden"
+                }`}
+              >
+                <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+                {[...Array(3)].map((_, index) => (
+                  <span
+                    key={index}
+                    className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                  ></span>
+                ))}
+              </div>
             </span>
             <span
-              className={`cursor-pointer ${
+              className={`cursor-pointer hover:text-[#0582CA] ${
                 pathname === "/contact" ? "text-[#00A6FB]" : "text-[#ffffff]"
               }`}
               onClick={() => handleNavigation("/contact")}
             >
               Contact
+              <div
+                className={`flex gap-x-[2px] items-start ${
+                  pathname === "/contact" ? "" : "hidden"
+                }`}
+              >
+                <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+                {[...Array(3)].map((_, index) => (
+                  <span
+                    key={index}
+                    className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                  ></span>
+                ))}
+              </div>
             </span>
           </div>
 
@@ -145,28 +184,67 @@ const Navbar: React.FC = () => {
       >
         <div className="flex flex-col items-start p-4 space-y-6">
           <span
-            className={`text-xl cursor-pointer ${
+            className={`text-xl cursor-pointer hover:text-[#0582CA] ${
               pathname === "/" ? "text-[#00A6FB]" : "text-[#FFFFFF]"
             }`}
             onClick={() => handleNavigation("/")}
           >
             Home
+            <div
+              className={`flex gap-x-[2px] items-start ${
+                pathname === "/" ? "" : "hidden"
+              }`}
+            >
+              <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+              {[...Array(3)].map((_, index) => (
+                <span
+                  key={index}
+                  className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                ></span>
+              ))}
+            </div>
           </span>
           <span
-            className={`text-xl cursor-pointer ${
+            className={`text-xl cursor-pointer hover:text-[#0582CA] ${
               pathname === "/project" ? "text-[#00A6FB]" : "text-[#FFFFFF]"
             }`}
             onClick={() => handleNavigation("/project")}
           >
             Project
+            <div
+              className={`flex gap-x-[2px] items-start ${
+                pathname === "/project" ? "" : "hidden"
+              }`}
+            >
+              <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+              {[...Array(3)].map((_, index) => (
+                <span
+                  key={index}
+                  className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                ></span>
+              ))}
+            </div>
           </span>
           <span
-            className={`text-xl cursor-pointer ${
+            className={`text-xl cursor-pointer hover:text-[#0582CA] ${
               pathname === "/contact" ? "text-[#00A6FB]" : "text-[#FFFFFF]"
             }`}
             onClick={() => handleNavigation("/contact")}
           >
             Contact
+            <div
+              className={`flex gap-x-[2px] items-start ${
+                pathname === "/contact" ? "" : "hidden"
+              }`}
+            >
+              <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+              {[...Array(3)].map((_, index) => (
+                <span
+                  key={index}
+                  className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                ></span>
+              ))}
+            </div>
           </span>
         </div>
       </div>
