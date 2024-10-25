@@ -57,12 +57,12 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav
-      className={`fixed w-full z-10 transition-all duration-300 ${
-        scrolling ? "bg-custom-glass shadow-lg" : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24">
+    <nav className={`fixed w-full z-10 transition-all duration-300`}>
+      <div
+        className={`max-w-7xl mx-auto px-4 sm:px-12 lg:px-[104px] ${
+          scrolling ? "bg-custom-glass shadow-lg" : "bg-transparent"
+        }`}
+      >
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
