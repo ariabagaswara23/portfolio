@@ -63,6 +63,7 @@ const config: Config = {
 			backgroundImage: {
 				'text-gradient': 'linear-gradient(0deg, rgba(5,25,35,1) 0%, rgba(0,100,148,1) 25%, rgba(0,166,251,1) 100%)',
 				'blurry-gradient': "url('/images/blurry-gradient.png')",
+				'gradient': 'linear-gradient(135deg, #87CEEB 0%, #ffffff 100%)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

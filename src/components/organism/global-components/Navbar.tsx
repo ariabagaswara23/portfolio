@@ -57,17 +57,17 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-10 transition-all duration-300`}>
+    <nav className={`fixed w-full z-10 transition-all duration-300 ${
+          scrolling ? "bg-white shadow-lg" : "bg-transparent"
+        }`}>
       <div
-        className={`max-w-7xl mx-auto px-4 sm:px-12 lg:px-[104px] ${
-          scrolling ? "bg-custom-glass shadow-lg" : "bg-transparent"
-        }`}
+        className={`max-w-7xl mx-auto px-4 sm:px-12 lg:px-24`}
       >
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <span
-              className="text-2xl font-bold cursor-pointer text-[#00A6FB]"
+              className="text-2xl font-bold cursor-pointer text-primary"
               onClick={() => handleNavigation("/")}
             >
               Aria.
@@ -77,8 +77,8 @@ const Navbar: React.FC = () => {
           {/* Links untuk desktop */}
           <div className="hidden md:flex space-x-8">
             <span
-              className={`cursor-pointer hover:text-[#0582CA] ${
-                pathname === "/" ? "text-[#00A6FB]" : "text-[#ffffff]"
+              className={`cursor-pointer hover:text-primary ${
+                pathname === "/" ? "text-primary" : "text-black"
               }`}
               onClick={() => handleNavigation("/")}
             >
@@ -88,18 +88,18 @@ const Navbar: React.FC = () => {
                   pathname === "/" ? "" : "hidden"
                 }`}
               >
-                <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+                <span className="h-[2px] grow bg-primary rounded-xl"></span>
                 {[...Array(3)].map((_, index) => (
                   <span
                     key={index}
-                    className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                    className="h-[2px] w-[4px] bg-primary rounded-xl"
                   ></span>
                 ))}
               </div>
             </span>
             <span
-              className={`cursor-pointer hover:text-[#0582CA] ${
-                pathname === "/project" ? "text-[#00A6FB]" : "text-[#ffffff]"
+              className={`cursor-pointer hover:text-primary ${
+                pathname === "/project" ? "text-primary" : "text-black"
               }`}
               onClick={() => handleNavigation("/project")}
             >
@@ -109,18 +109,18 @@ const Navbar: React.FC = () => {
                   pathname === "/project" ? "" : "hidden"
                 }`}
               >
-                <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+                <span className="h-[2px] grow bg-primary rounded-xl"></span>
                 {[...Array(3)].map((_, index) => (
                   <span
                     key={index}
-                    className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                    className="h-[2px] w-[4px] bg-primary rounded-xl"
                   ></span>
                 ))}
               </div>
             </span>
             <span
-              className={`cursor-pointer hover:text-[#0582CA] ${
-                pathname === "/contact" ? "text-[#00A6FB]" : "text-[#ffffff]"
+              className={`cursor-pointer hover:text-primary ${
+                pathname === "/contact" ? "text-primary" : "text-black"
               }`}
               onClick={() => handleNavigation("/contact")}
             >
@@ -130,14 +130,20 @@ const Navbar: React.FC = () => {
                   pathname === "/contact" ? "" : "hidden"
                 }`}
               >
-                <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+                <span className="h-[2px] grow bg-primary rounded-xl"></span>
                 {[...Array(3)].map((_, index) => (
                   <span
                     key={index}
-                    className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                    className="h-[2px] w-[4px] bg-primary rounded-xl"
                   ></span>
                 ))}
               </div>
+            </span>
+          </div>
+
+          <div className="hidden md:flex">
+            <span className="text-black">
+              T
             </span>
           </div>
 
@@ -145,7 +151,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-[#00A6FB] focus:outline-none"
+              className="text-primary focus:outline-none"
             >
               <svg
                 className="h-8 w-8"
@@ -184,8 +190,8 @@ const Navbar: React.FC = () => {
       >
         <div className="flex flex-col items-start p-4 space-y-6">
           <span
-            className={`text-xl cursor-pointer hover:text-[#0582CA] ${
-              pathname === "/" ? "text-[#00A6FB]" : "text-[#FFFFFF]"
+            className={`text-xl cursor-pointer hover:text-primary ${
+              pathname === "/" ? "text-primary" : "text-black"
             }`}
             onClick={() => handleNavigation("/")}
           >
@@ -195,18 +201,18 @@ const Navbar: React.FC = () => {
                 pathname === "/" ? "" : "hidden"
               }`}
             >
-              <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+              <span className="h-[2px] grow bg-primary rounded-xl"></span>
               {[...Array(3)].map((_, index) => (
                 <span
                   key={index}
-                  className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                  className="h-[2px] w-[4px] bg-primary rounded-xl"
                 ></span>
               ))}
             </div>
           </span>
           <span
-            className={`text-xl cursor-pointer hover:text-[#0582CA] ${
-              pathname === "/project" ? "text-[#00A6FB]" : "text-[#FFFFFF]"
+            className={`text-xl cursor-pointer hover:text-primary ${
+              pathname === "/project" ? "text-primary" : "text-black"
             }`}
             onClick={() => handleNavigation("/project")}
           >
@@ -216,18 +222,18 @@ const Navbar: React.FC = () => {
                 pathname === "/project" ? "" : "hidden"
               }`}
             >
-              <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+              <span className="h-[2px] grow bg-primary rounded-xl"></span>
               {[...Array(3)].map((_, index) => (
                 <span
                   key={index}
-                  className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                  className="h-[2px] w-[4px] bg-primary rounded-xl"
                 ></span>
               ))}
             </div>
           </span>
           <span
-            className={`text-xl cursor-pointer hover:text-[#0582CA] ${
-              pathname === "/contact" ? "text-[#00A6FB]" : "text-[#FFFFFF]"
+            className={`text-xl cursor-pointer hover:text-primary ${
+              pathname === "/contact" ? "text-primary" : "text-black"
             }`}
             onClick={() => handleNavigation("/contact")}
           >
@@ -237,11 +243,11 @@ const Navbar: React.FC = () => {
                 pathname === "/contact" ? "" : "hidden"
               }`}
             >
-              <span className="h-[2px] grow bg-[#00A6FB] rounded-xl"></span>
+              <span className="h-[2px] grow bg-primary rounded-xl"></span>
               {[...Array(3)].map((_, index) => (
                 <span
                   key={index}
-                  className="h-[2px] w-[4px] bg-[#00A6FB] rounded-xl"
+                  className="h-[2px] w-[4px] bg-primary rounded-xl"
                 ></span>
               ))}
             </div>
