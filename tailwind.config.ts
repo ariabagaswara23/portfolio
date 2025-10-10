@@ -7,6 +7,7 @@ const config: Config = {
 		extend: {
 			animation: {
 				meteor: "meteor 5s linear infinite",
+				gradient: 'gradient 8s linear infinite'
 			},
 			keyframes: {
 				meteor: {
@@ -16,6 +17,11 @@ const config: Config = {
 						transform: "rotate(215deg) translateX(-500px)",
 						opacity: "0",
 					},
+				},
+				gradient: {
+					"0%": { backgroundPosition: "0% 50%" },
+					"50%": { backgroundPosition: "100% 50%" },
+					"100%": { backgroundPosition: "0% 50%" },
 				},
 			},
 			colors: {

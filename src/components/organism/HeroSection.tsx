@@ -9,58 +9,25 @@ import {
 } from "react-icons/fa";
 import SplitText from "../SplitText";
 import BlurText from "../BlurText";
+import CountUp from "../CountUp";
 
 const HeroSection = () => {
   return (
     <section
       id="jumbotron"
-      className="w-screen min-h-screen bg-gradient-to-br from-white via-sky-50 to-white relative overflow-hidden"
+      className="w-screen min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       <div className="absolute inset-0 opacity-35">
-        {/* Main Grid */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-                  linear-gradient(rgba(135, 206, 235, 0.15) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(135, 206, 235, 0.15) 1px, transparent 1px)
-                `,
-            backgroundSize: "40px 40px",
-          }}
-        ></div>
-
-        {/* Accent Grid */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-                  linear-gradient(rgba(135, 206, 235, 0.25) 1px, transparent 1px),
-                  linear-gradient(90deg, rgba(135, 206, 235, 0.25) 1px, transparent 1px)
-                `,
-            backgroundSize: "120px 120px",
-          }}
-        ></div>
-
-        {/* Dot Pattern Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage:
-              "radial-gradient(circle at 2px 2px, rgba(135, 206, 235, 0.12) 1px, transparent 0)",
-            backgroundSize: "60px 60px",
-          }}
-        ></div>
+        {/* Floating Shapes */}
+        <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-sky-400 transform rotate-45 animate-pulse"></div>
+        <div className="absolute top-1/2 right-1/4 w-6 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-3 h-12 bg-sky-200 rounded-full transform rotate-12"></div>
       </div>
-
-      {/* Floating Geometric Shapes */}
-      <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-sky-400 transform rotate-45 animate-pulse"></div>
-      <div className="absolute top-1/2 right-1/4 w-6 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-3 h-12 bg-sky-200 rounded-full transform rotate-12"></div>
-      <div className="relative flex flex-col gap-1 md:gap-2 max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 h-screen justify-center items-center">
+      <div className="relative flex flex-col z-10 gap-1 md:gap-2 max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 h-screen justify-center items-center">
         <SplitText
           text={"Hi, I'm"}
-          className="text-1xl md:text-2xl lg:text-4xl text-secondary pl-1"
-          delay={100} // Mulai di 100ms
+          className="text-1xl md:text-2xl lg:text-4xl text-secondary"
+          delay={100}
           duration={0.6}
           ease="power3.out"
           splitType="chars"
@@ -97,18 +64,28 @@ const HeroSection = () => {
         </p>
         <div className="flex flex-row justify-center items-center">
           <div className="flex flex-col">
-            <span className="text-primary text-xl md:text-2xl font-bold text-center">
-              2+
-            </span>
+            <CountUp
+              from={0}
+              to={2}
+              separator=","
+              direction="up"
+              duration={1}
+              className="text-primary text-xl md:text-2xl font-bold text-center"
+            />
             <span className="text-secondary text-center text-xs md:text-sm">
               Years of Experience
             </span>
           </div>
           <div className="border-l-2 border-secondary h-8 mx-6"></div>
           <div className="flex flex-col">
-            <span className="text-primary text-xl md:text-2xl font-bold text-center">
-              10+
-            </span>
+            <CountUp
+              from={0}
+              to={10}
+              separator=","
+              direction="up"
+              duration={5}
+              className="text-primary text-xl md:text-2xl font-bold text-center"
+            />
             <span className="text-secondary text-center text-xs md:text-sm">
               Completed Projects
             </span>

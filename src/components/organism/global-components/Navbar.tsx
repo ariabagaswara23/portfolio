@@ -57,27 +57,27 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-10 transition-all duration-300 ${
-          scrolling ? "bg-white shadow-lg" : "bg-transparent"
+    <nav className={`fixed w-full z-20 transition-all duration-300 ${
+          scrolling ? "bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm" : "bg-transparent"
         }`}>
       <div
         className={`max-w-7xl mx-auto px-4 sm:px-12 lg:px-24`}
       >
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
             <span
               className="text-2xl font-bold cursor-pointer text-primary"
               onClick={() => handleNavigation("/")}
             >
-              Aria.
+              Aria<span className="text-secondary">.dev</span>
             </span>
           </div>
 
           {/* Links untuk desktop */}
           <div className="hidden md:flex space-x-8">
             <span
-              className={`cursor-pointer hover:text-primary ${
+              className={`cursor-pointer font-semibold hover:text-primary ${
                 pathname === "/" ? "text-primary" : "text-black"
               }`}
               onClick={() => handleNavigation("/")}
@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
               </div>
             </span>
             <span
-              className={`cursor-pointer hover:text-primary ${
+              className={`cursor-pointer font-semibold hover:text-primary ${
                 pathname === "/project" ? "text-primary" : "text-black"
               }`}
               onClick={() => handleNavigation("/project")}
@@ -119,7 +119,7 @@ const Navbar: React.FC = () => {
               </div>
             </span>
             <span
-              className={`cursor-pointer hover:text-primary ${
+              className={`cursor-pointer font-semibold hover:text-primary ${
                 pathname === "/contact" ? "text-primary" : "text-black"
               }`}
               onClick={() => handleNavigation("/contact")}
@@ -138,12 +138,6 @@ const Navbar: React.FC = () => {
                   ></span>
                 ))}
               </div>
-            </span>
-          </div>
-
-          <div className="hidden md:flex">
-            <span className="text-black">
-              T
             </span>
           </div>
 
@@ -186,7 +180,7 @@ const Navbar: React.FC = () => {
         ref={menuRef} // Menambahkan ref ke elemen ini
         className={`md:hidden transition-transform transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed right-0 top-0 w-2/3 h-full bg-custom-glass shadow-lg z-20`}
+        } fixed right-0 top-0 w-2/3 h-full bg-custom-glass shadow-lg z-30`}
       >
         <div className="flex flex-col items-start p-4 space-y-6">
           <span
