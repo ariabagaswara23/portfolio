@@ -1,6 +1,7 @@
 import Navbar from "@/components/organism/global-components/Navbar";
 import HeroSection from "@/components/organism/HeroSection";
 import ProjectsSection from "@/components/organism/ProjectsSection";
+import ServicesSection from "@/components/organism/ServicesSection";
 
 // import { ChevronDownIcon } from "@radix-ui/react-icons";
 
@@ -44,8 +45,9 @@ export default function Home() {
         ></div>
       </div>
       {/* Page Sections */}
-      <Navbar />
+      {/* <Navbar /> */}
       <HeroSection />
+      <ServicesSection />
       <ProjectsSection />
     </div>
   );

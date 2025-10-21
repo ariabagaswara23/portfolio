@@ -3,68 +3,124 @@
 import React from "react";
 import GradientText from "../GradientText";
 import Image from "next/image";
+import ProjectCard from "../atoms/ProjectCard";
+import FlippableCard from "../atoms/FlippableCard";
+import { color } from "motion";
+
+const projects = [
+  {
+    image: "/images/posaja.png",
+    title: "PosAja UMKM",
+    description:
+      "A digital platform by Pos Indonesia designed to digitize and support Micro, Small, and Medium Enterprises (MSMEs).",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    link: "https://posaja.id/",
+    year: "2025",
+    color: "#162691",
+  },
+  {
+    image: "/images/mydigilearn.png",
+    title: "myDigiLearn",
+    description:
+      "Corporate E-Learning solution that provides employees with a complete and organized learning program.",
+    techStack: ["Vue.js", "Pinia", "Zustand", "Vite"],
+    link: "https://mydigilearn.id/",
+    year: "2023",
+    color: "#DA4A4A",
+  },
+  {
+    image: "/images/learnhub.png",
+    title: "LearnHub",
+    description:
+      "Learnhub is a website builder for content creators, institutions, foundations, organizations and communities to create their own academies without many tools and without coding.",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    link: "https://learnhub.id/",
+    year: "2024",
+    color: "#9957ec",
+  },
+  {
+    image: "/images/mudakerja.png",
+    title: "MudaKerja",
+    description: "E-Learning platform for hospitality training.",
+    techStack: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma",
+      "Supabase",
+      "Xendit",
+    ],
+    link: "https://www.mudakerja.com/",
+    year: "2025",
+    color: "#115198",
+  },
+  {
+    image: "/images/hms_itb_2023.png",
+    title: "HMS ITB 2023",
+    description:
+      "A voting website for the election of the chairman of the HMS ITB organization in 2023.",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    link: "https://github.com/linxtstudio/hms-election",
+    year: "2023",
+    color: "#D97522",
+  },
+  // {
+  //   image: "/images/covid19web.png",
+  //   title: "Covid 19 Stats Website",
+  //   description:
+  //     "Simple website to view Covid 19 statistics in various provincies in Indonesia.",
+  //   techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+  //   link: "https://learnhub.id/",
+  //   year: "2020",
+  // },
+  {
+    image: "/images/foodeez.png",
+    title: "Foodeez",
+    description:
+      "Simple website showcasing core e-commerce functions: food listing, Add to Cart, cart management, and total price calculation.",
+    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    link: "http://foodeez-two.vercel.app/",
+    year: "2022",
+    color: "#519259",
+  },
+];
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="w-full flex flex-col min-h-screen bg-secondary">
+    <section
+      id="projects"
+      className="w-full flex flex-col min-h-screen bg-secondary"
+    >
       <div className="absolute inset-0 opacity-35">
         {/* Top-left ellipse */}
         <div className="absolute top-2/4 left-3/4 w-10 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
         {/* Bottom-right square */}
-        <div className="absolute bottom-16 right-24 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
+        <div className="absolute bottom-40 right-36 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
 
         {/* Bottom floating line */}
-        <div className="absolute bottom-12 left-1/2 w-24 h-[2px] bg-sky-300 animate-pulse"></div>
+        <div className="absolute bottom-24 left-1/3 w-24 h-[2px] bg-sky-300 animate-pulse"></div>
       </div>
-      <div className="px-4 sm:px-12 lg:px-24 py-10 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 ">
         <GradientText
           colors={["#ffffff", "#00a2fa", "#ffffff"]}
           animationSpeed={10}
           showBorder={false}
-          className="text-start font-bold text-4xl md:text-5xl lg:text-6xl py-3 cursor-default mx-0 bg-transparent"
+          className="text-start font-bold text-4xl md:text-5xl lg:text-6xl py-3 cursor-default mx-0 mb-3 bg-transparent"
         >
-          Projects.
+          Selected Projects.
         </GradientText>
+        <p className="text-center text-white mb-6">
+          Click card to see the detail
+        </p>
         {/* <div className="flex flex-row w-full px-4 sm:px-12 lg:px-24  py-4 h-screen text-white">
           
         </div> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
-          {Array.from({ length: 3 }).map((_, idx) => (
-            <div
-            // onClick={() => window.open(link, "_blank")}
-            className="group cursor-pointer rounded-xl overflow-hidden shadow-lg z-10 bg-[#003757] text-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
-          >
-            <div className="relative w-full h-48 overflow-hidden">
-              <img
-                src={
-                  "https://slickdeals.net/blog/wp-content/uploads/2020/03/20-hero-dell-remote-work-3.jpg"
-                }
-                alt={"tes"}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 border-b-primary border-b-4"
-              />
-            </div>
-
-            <div className="p-5 space-y-3">
-              <h3 className="text-xl font-semibold group-hover:text-[#00a2fa] transition-colors duration-300">
-                Tes
-              </h3>
-              <p className="text-sm text-gray-200">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Impedit, ea modi! Ab quibusdam officiis libero vitae voluptas
-                quas inventore ipsam.
-              </p>
-
-              <div className="flex flex-wrap gap-2 pt-2">
-                <span
-                  key={"1"}
-                  className="text-xs bg-[#00a2fa]/20 border border-[#00a2fa]/40 text-[#00a2fa] px-2 py-1 rounded-full"
-                >
-                  Next.js
-                </span>
-              </div>
-            </div>
-          </div>
-          ))}    
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
+          {projects.map((project, index) => (
+            // <ProjectCard key={index} {...project} />
+            <FlippableCard key={index} {...project} flipOn="click" />
+          ))}
         </div>
       </div>
     </section>

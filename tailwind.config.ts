@@ -79,6 +79,24 @@ const config: Config = {
 		}
 	},
 	// eslint-disable-next-line @typescript-eslint/no-require-imports
-	plugins: [require("tailwindcss-animate")],
+	plugins: [require("tailwindcss-animate"),
+		function ({ addUtilities }: { addUtilities: any }) {
+	  const newUtilities = {
+		".perspective": {
+		  perspective: "1000px",
+		},
+		".transform-style-preserve-3d": {
+		  transformStyle: "preserve-3d",
+		},
+		".backface-hidden": {
+		  backfaceVisibility: "hidden",
+		},
+		".rotate-y-180": {
+		  transform: "rotateY(180deg)",
+		},
+	  };
+	  addUtilities(newUtilities, ["responsive", "hover"]);
+	},
+	],
 };
 export default config;

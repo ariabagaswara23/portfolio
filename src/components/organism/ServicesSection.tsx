@@ -1,0 +1,59 @@
+"use client";
+import React from "react";
+import { FaLaptopCode } from "react-icons/fa";
+import GradientText from "../GradientText";
+
+const ServicesSection = () => {
+  return (
+    <section
+      id="services"
+      className="w-full min-h-screen relative bg-service-section"
+    >
+      <GradientText
+        colors={["#003757", "#00a2fa", "#003757"]}
+        animationSpeed={0}
+        showBorder={false}
+        className="text-start font-bold text-4xl md:text-5xl lg:text-6xl py-3 cursor-default mx-0 mb-3 bg-transparent"
+      >
+        What I Offer.
+      </GradientText>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 py-6">
+        <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
+          <FaLaptopCode size={48} className="mb-4 text-primary" />
+          <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
+            Web Development
+          </h3>
+          <p className="text-xs lg:text-sm text-center text-secondary">
+            {" "}
+            Building responsive and dynamic websites using modern technologies
+            like React, Next.js, and TailwindCSS.
+          </p>
+        </div>
+        <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
+          <FaLaptopCode size={48} className="mb-4 text-primary" />
+          <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
+            UI/UX Implementation
+          </h3>
+          <p className="text-xs lg:text-sm text-center text-secondary">
+            {" "}
+            Improving site loading speed, minimizing bundle size, and optimizing
+            images, fonts, and assets for better user experience.
+          </p>
+        </div>
+        <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
+          <FaLaptopCode size={48} className="mb-4 text-primary" />
+          <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
+            API Integration
+          </h3>
+          <p className="text-xs lg:text-sm text-center text-secondary">
+            {" "}
+            Seamlessly connecting frontend applications with RESTful APIs to
+            deliver dynamic and interactive user experiences.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ServicesSection;

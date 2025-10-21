@@ -6,9 +6,32 @@
   -webkit-backdrop-filter: blur(7.5px);
 }
 
+.bg-service-section {
+  background-image: url('/pattern/layered-waves.svg');
+  background-size: 100% auto;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+}
+
 .bg-about-section {
   background: rgba(5, 25, 35, 0.85);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }

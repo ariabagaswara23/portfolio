@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-20 transition-all duration-300 ${
+    <nav className={`fixed w-full z-[100] transition-all duration-300 ${
           scrolling ? "bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm" : "bg-transparent"
         }`}>
       <div
@@ -180,7 +180,7 @@ const Navbar: React.FC = () => {
         ref={menuRef} // Menambahkan ref ke elemen ini
         className={`md:hidden transition-transform transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } fixed right-0 top-0 w-2/3 h-full bg-custom-glass shadow-lg z-30`}
+        } fixed right-0 top-0 w-2/3 h-full bg-custom-glass shadow-lg z-[99]`}
       >
         <div className="flex flex-col items-start p-4 space-y-6">
           <span

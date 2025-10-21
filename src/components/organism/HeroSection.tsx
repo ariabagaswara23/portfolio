@@ -37,17 +37,17 @@ const HeroSection = () => {
           rootMargin="-100px"
           textAlign="center"
         />
-        <div className="flex flex-row flex-wrap justify-center items-center text-4xl md:text-7xl lg:text-8xl font-bold pb-3">
+        <div className="flex flex-row flex-wrap gap-1 md:gap-2 lg:gap-3 justify-center items-center text-4xl md:text-7xl lg:text-8xl font-bold pb-3">
           <BlurText
-            text="Aria "
-            delay={1000} // Disesuaikan: Muncul setelah SplitText selesai
+            text="Aria"
+            delay={1000}
             animateBy="words"
             direction="top"
             className="text-primary"
           />
           <BlurText
             text="Bagaswara"
-            delay={1000} // Disesuaikan: Muncul bersamaan dengan "Aria"
+            delay={1000}
             animateBy="words"
             direction="top"
             className="text-secondary"
@@ -80,7 +80,7 @@ const HeroSection = () => {
           <div className="flex flex-col">
             <CountUp
               from={0}
-              to={10}
+              to={6}
               separator=","
               direction="up"
               duration={5}
@@ -98,7 +98,7 @@ const HeroSection = () => {
             icon={<FaDownload />}
             onClick={() => console.log("Button clicked")}
             iconPosition="left"
-            className="flex items-center justify-center px-4 py-2 w-full md:w-fit bg-transparent text-primary font-semibold rounded-md hover:border-secondary hover:text-secondary disabled:bg-gray-400 disabled:cursor-not-allowed border-2 border-primary"
+            className="flex items-center justify-center px-4 py-2 w-full md:w-fit bg-secondary text-white font-semibold rounded-md hover:text-primary disabled:bg-gray-400 disabled:cursor-not-allowed"
           />
           <div className="flex flex-row gap-4 items-center">
             <a
