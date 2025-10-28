@@ -1,3 +1,4 @@
+import FooterSection from "@/components/organism/FooterSection";
 import Navbar from "@/components/organism/global-components/Navbar";
 import HeroSection from "@/components/organism/HeroSection";
 import ProjectsSection from "@/components/organism/ProjectsSection";
@@ -49,6 +50,7 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />
+      <FooterSection />
     </div>
   );
 }

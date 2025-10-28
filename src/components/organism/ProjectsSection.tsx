@@ -2,10 +2,7 @@
 
 import React from "react";
 import GradientText from "../GradientText";
-import Image from "next/image";
-import ProjectCard from "../atoms/ProjectCard";
 import FlippableCard from "../atoms/FlippableCard";
-import { color } from "motion";
 
 const projects = [
   {
@@ -101,7 +98,7 @@ const ProjectsSection = () => {
         {/* Bottom floating line */}
         <div className="absolute bottom-24 left-1/3 w-24 h-[2px] bg-sky-300 animate-pulse"></div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 mb-6 ">
         <GradientText
           colors={["#ffffff", "#00a2fa", "#ffffff"]}
           animationSpeed={10}
