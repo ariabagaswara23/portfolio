@@ -3,6 +3,7 @@
 import React from "react";
 import GradientText from "../GradientText";
 import FlippableCard from "../atoms/FlippableCard";
+import AnimatedContent from "../AnimatedContent";
 
 const projects = [
   {
@@ -10,7 +11,15 @@ const projects = [
     title: "PosAja UMKM",
     description:
       "A digital platform by Pos Indonesia designed to digitize and support Micro, Small, and Medium Enterprises (MSMEs).",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Tanstack Query",
+      "Axios",
+      "Yup",
+    ],
     link: "https://posaja.id/",
     year: "2025",
     color: "#162691",
@@ -20,7 +29,7 @@ const projects = [
     title: "myDigiLearn",
     description:
       "Corporate E-Learning solution that provides employees with a complete and organized learning program.",
-    techStack: ["Vue.js", "Pinia", "Zustand", "Vite"],
+    techStack: ["Vue.js", "Vite", "TailwindCSS", "Pinia", "Axios", "Firebase"],
     link: "https://mydigilearn.id/",
     year: "2023",
     color: "#DA4A4A",
@@ -30,7 +39,15 @@ const projects = [
     title: "LearnHub",
     description:
       "Learnhub is a website builder for content creators, institutions, foundations, organizations and communities to create their own academies without many tools and without coding.",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Tanstack Query",
+      "Axios",
+      "Zod",
+    ],
     link: "https://learnhub.id/",
     year: "2024",
     color: "#9957ec",
@@ -39,15 +56,7 @@ const projects = [
     image: "/images/mudakerja.png",
     title: "MudaKerja",
     description: "E-Learning platform for hospitality training.",
-    techStack: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "TailwindCSS",
-      "Prisma",
-      "Supabase",
-      "Xendit",
-    ],
+    techStack: ["React", "Next.js", "TypeScript", "TailwindCSS", "Zod"],
     link: "https://www.mudakerja.com/",
     year: "2025",
     color: "#115198",
@@ -57,7 +66,7 @@ const projects = [
     title: "HMS ITB 2023",
     description:
       "A voting website for the election of the chairman of the HMS ITB organization in 2023.",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    techStack: ["React", "Vite", "TailwindCSS", "Axios"],
     link: "https://github.com/linxtstudio/hms-election",
     year: "2023",
     color: "#D97522",
@@ -76,7 +85,7 @@ const projects = [
     title: "Foodeez",
     description:
       "Simple website showcasing core e-commerce functions: food listing, Add to Cart, cart management, and total price calculation.",
-    techStack: ["Next.js", "TypeScript", "TailwindCSS", "React Query"],
+    techStack: ["Vue.js", "Webpack", "Vuex", "Sass (SCSS)", "PostCSS", "Axios"],
     link: "http://foodeez-two.vercel.app/",
     year: "2022",
     color: "#519259",
@@ -93,10 +102,10 @@ const ProjectsSection = () => {
         {/* Top-left ellipse */}
         <div className="absolute top-2/4 left-3/4 w-10 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
         {/* Bottom-right square */}
-        <div className="absolute bottom-40 right-36 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
+        <div className="absolute top-3/4 right-36 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
 
         {/* Bottom floating line */}
-        <div className="absolute bottom-24 left-1/3 w-24 h-[2px] bg-sky-300 animate-pulse"></div>
+        <div className="absolute top-3/4 left-24 w-4 h-4 bg-sky-300 rotate-45 animate-pulse"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 mb-6 ">
         <GradientText
@@ -116,7 +125,19 @@ const ProjectsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
           {projects.map((project, index) => (
             // <ProjectCard key={index} {...project} />
-            <FlippableCard key={index} {...project} flipOn="click" />
+            <AnimatedContent
+              distance={200}
+              direction="vertical"
+              reverse={false}
+              duration={1}
+              ease="power3.out"
+              initialOpacity={0.2}
+              animateOpacity
+              scale={1}
+              threshold={0.1}
+            >
+              <FlippableCard key={index} {...project} flipOn="click" />
+            </AnimatedContent>
           ))}
         </div>
       </div>
