@@ -46,7 +46,7 @@ export default function Home() {
         ></div>
       </div>
       {/* Page Sections */}
-      {/* <Navbar /> */}
+      <Navbar />
       <HeroSection />
       <ServicesSection />
       <ProjectsSection />

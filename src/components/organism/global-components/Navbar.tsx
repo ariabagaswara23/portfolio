@@ -57,12 +57,10 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed w-full z-[100] transition-all duration-300 ${
-          scrolling ? "bg-white/90 backdrop-blur-md border-b border-gray-200 shadow-sm" : "bg-transparent"
-        }`}>
-      <div
-        className={`max-w-7xl mx-auto px-4 sm:px-12 lg:px-24`}
-      >
+    <nav
+      className={`w-full z-[100] transition-all duration-300 bg-transparent`}
+    >
+      <div className={`max-w-7xl mx-auto px-4 sm:px-12 lg:px-24`}>
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -70,7 +68,7 @@ const Navbar: React.FC = () => {
               className="text-2xl font-bold cursor-pointer text-primary"
               onClick={() => handleNavigation("/")}
             >
-              Aria<span className="text-secondary">.dev</span>
+              Aria<span className="text-secondary">.</span>
             </span>
           </div>
 
@@ -145,7 +143,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-primary focus:outline-none"
+              className="text-primary focus:outline-none z-50"
             >
               <svg
                 className="h-8 w-8"
