@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   FaEnvelope,
   FaPhone,
@@ -7,36 +7,22 @@ import {
   FaLinkedin,
   FaGithub,
   FaInstagram,
-  FaPaperPlane,
-  FaSpinner,
-  FaCheck,
 } from "react-icons/fa";
 import ContactInfo from "../atoms/ContactInfo";
 import SocialButton from "../atoms/SocialButton";
-import tinycolor from "tinycolor2";
-
-type FormState = {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-};
 
 export default function FooterSection(): JSX.Element {
-  const color = tinycolor("#000000");
-  const toColor = tinycolor(color).analogous()[2].toHexString();
-
   return (
     <footer id="footer" className="text-white bg-black z-20">
       <div className="container max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           <div>
             <h2 className="text-3xl font-bold mb-3 text-primary text-center lg:text-start">
-              Let's Collaborate!
+              Let&apos;s Collaborate!
             </h2>
             <p className="text-lg mb-8 text-white text-center lg:text-start">
-              I'm ready to help bring your digital ideas to life. Contact me for
-              project discussions or collaborations.
+              I&apos;m ready to help bring your digital ideas to life. Contact
+              me for project discussions or collaborations.
             </p>
 
             <div className="flex space-x-4 w-full justify-center lg:justify-start">

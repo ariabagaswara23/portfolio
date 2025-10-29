@@ -126,6 +126,7 @@ const ProjectsSection = () => {
           {projects.map((project, index) => (
             // <ProjectCard key={index} {...project} />
             <AnimatedContent
+              key={index}
               distance={200}
               direction="vertical"
               reverse={false}
