@@ -33,11 +33,11 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
 
   return (
     <div
-      className="w-full lg:w-72 h-96 perspective cursor-pointer"
+      className="w-full lg:w-72 h-96 perspective cursor-pointer transform transition-transform duration-300 hover:scale-105"
       onClick={handleFlip}
     >
       <div
-        className={`relative w-full h-full transition-transform duration-700 transform transform-style-preserve-3d ${
+        className={`relative w-full h-full transition-all duration-700 transform transform-style-preserve-3d ${
           flipOn === "hover"
             ? "hover:rotate-y-180"
             : isFlipped
@@ -47,7 +47,7 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
       >
         {/* Front */}
         <div
-          className={`absolute inset-0 rounded-2xl shadow-lg overflow-hidden backface-hidden flex flex-col justify-around`}
+          className={`absolute inset-0 rounded-2xl shadow-lg overflow-hidden backface-hidden flex flex-col justify-around transition-shadow duration-300 hover:shadow-xl`}
           style={{ backgroundColor: color }}
         >
           {/* Year Container */}
@@ -63,7 +63,7 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
               <img
                 src={image}
                 alt={title}
-                className="w-full object-contain transition-transform duration-500 group-hover:scale-105 rounded-md"
+                className="w-full object-contain transition-transform duration-500 hover:scale-110 rounded-md"
               />
             </div>
           </div>
@@ -78,7 +78,7 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
 
         {/* Back */}
         <div
-          className="absolute inset-0 rounded-2xl shadow-lg p-4 rotate-y-180 backface-hidden flex flex-col justify-between"
+          className="absolute inset-0 rounded-2xl shadow-lg p-4 rotate-y-180 backface-hidden flex flex-col justify-between transition-shadow duration-300 hover:shadow-xl"
           style={{
             background: `linear-gradient(135deg, ${color}, ${toColor})`,
           }}
@@ -98,7 +98,7 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
               {techStack.map((tech, index) => (
                 <li
                   key={index}
-                  className="text-xs text-white backdrop-blur-sm px-2 py-1 rounded-lg shadow-sm"
+                  className="text-xs text-white backdrop-blur-sm px-2 py-1 rounded-lg shadow-sm transition-transform duration-300 hover:scale-105"
                   style={{
                     backgroundColor: tinycolor(color)
                       .setAlpha(0.2)
@@ -117,7 +117,7 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 text-sm text-white font-medium underline text-right"
+              className="mt-4 text-sm text-white font-medium underline text-right transition-colors duration-300 hover:text-opacity-80"
             >
               See Project →
             </a>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FaLaptopCode } from "react-icons/fa";
+import { FaLaptopCode, FaPalette, FaPlug } from "react-icons/fa";
 import GradientText from "../GradientText";
 import AnimatedContent from "../AnimatedContent";
 
@@ -31,7 +31,7 @@ const ServicesSection = () => {
           threshold={0.2}
         >
           <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
-            <FaLaptopCode size={48} className="mb-4 text-primary" />
+            <FaLaptopCode size={48} className="mb-4 text-secondary" />
             <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
               Web Development
             </h3>
@@ -54,7 +54,7 @@ const ServicesSection = () => {
           threshold={0.2}
         >
           <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
-            <FaLaptopCode size={48} className="mb-4 text-primary" />
+            <FaPalette size={48} className="mb-4 text-secondary" />
             <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
               UI/UX Implementation
             </h3>
@@ -77,7 +77,7 @@ const ServicesSection = () => {
           threshold={0.2}
         >
           <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
-            <FaLaptopCode size={48} className="mb-4 text-primary" />
+            <FaPlug size={48} className="mb-4 text-secondary" />
             <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
               API Integration
             </h3>

@@ -97,14 +97,14 @@ const Navbar: React.FC = () => {
             </span>
             <span
               className={`cursor-pointer font-semibold hover:text-primary ${
-                pathname === "/project" ? "text-primary" : "text-black"
+                pathname === "#projects" ? "text-primary" : "text-black"
               }`}
-              onClick={() => handleNavigation("/project")}
+              onClick={() => handleNavigation("#projects")}
             >
               Project
               <div
                 className={`flex gap-x-[2px] items-start ${
-                  pathname === "/project" ? "" : "hidden"
+                  pathname === "#projects" ? "" : "hidden"
                 }`}
               >
                 <span className="h-[2px] grow bg-primary rounded-xl"></span>
@@ -118,14 +118,14 @@ const Navbar: React.FC = () => {
             </span>
             <span
               className={`cursor-pointer font-semibold hover:text-primary ${
-                pathname === "/contact" ? "text-primary" : "text-black"
+                pathname === "#footer" ? "text-primary" : "text-black"
               }`}
-              onClick={() => handleNavigation("/contact")}
+              onClick={() => handleNavigation("#footer")}
             >
               Contact
               <div
                 className={`flex gap-x-[2px] items-start ${
-                  pathname === "/contact" ? "" : "hidden"
+                  pathname === "#footer" ? "" : "hidden"
                 }`}
               >
                 <span className="h-[2px] grow bg-primary rounded-xl"></span>
@@ -204,14 +204,14 @@ const Navbar: React.FC = () => {
           </span>
           <span
             className={`text-xl cursor-pointer hover:text-primary ${
-              pathname === "/project" ? "text-primary" : "text-black"
+              pathname === "#projects" ? "text-primary" : "text-black"
             }`}
-            onClick={() => handleNavigation("/project")}
+            onClick={() => handleNavigation("#projects")}
           >
             Project
             <div
               className={`flex gap-x-[2px] items-start ${
-                pathname === "/project" ? "" : "hidden"
+                pathname === "#projects" ? "" : "hidden"
               }`}
             >
               <span className="h-[2px] grow bg-primary rounded-xl"></span>
@@ -225,14 +225,14 @@ const Navbar: React.FC = () => {
           </span>
           <span
             className={`text-xl cursor-pointer hover:text-primary ${
-              pathname === "/contact" ? "text-primary" : "text-black"
+              pathname === "#footer" ? "text-primary" : "text-black"
             }`}
-            onClick={() => handleNavigation("/contact")}
+            onClick={() => handleNavigation("#footer")}
           >
             Contact
             <div
               className={`flex gap-x-[2px] items-start ${
-                pathname === "/contact" ? "" : "hidden"
+                pathname === "#footer" ? "" : "hidden"
               }`}
             >
               <span className="h-[2px] grow bg-primary rounded-xl"></span>

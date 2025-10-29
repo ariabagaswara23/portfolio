@@ -27,7 +27,7 @@ export default function FooterSection(): JSX.Element {
   const toColor = tinycolor(color).analogous()[2].toHexString();
 
   return (
-    <footer className="text-white bg-black z-20">
+    <footer id="footer" className="text-white bg-black z-20">
       <div className="container max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 mb-12">
           <div>
