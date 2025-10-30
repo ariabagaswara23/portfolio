@@ -96,7 +96,13 @@ const HeroSection = () => {
             label="Download Resume"
             type="button"
             icon={<FaDownload />}
-            onClick={() => console.log("Button clicked")}
+            onClick={() =>
+              window.open(
+                process.env.NEXT_PUBLIC_CV_LINK || "",
+                "_blank",
+                "noopener,noreferrer"
+              )
+            }
             iconPosition="left"
             className="flex items-center justify-center px-4 py-2 w-full md:w-fit bg-secondary text-white font-semibold rounded-md hover:text-primary disabled:bg-gray-400 disabled:cursor-not-allowed"
           />
@@ -104,6 +110,7 @@ const HeroSection = () => {
             <a
               href="https://www.linkedin.com/in/aria-bagaswara/"
               target="_blank"
+              rel="noopener noreferrer"
               className="text-lg md:text-2xl"
             >
               <FaLinkedinIn className="text-primary hover:text-black" />
@@ -111,6 +118,7 @@ const HeroSection = () => {
             <a
               href="https://github.com/ariabagaswara23"
               target="_blank"
+              rel="noopener noreferrer"
               className="text-lg md:text-2xl"
             >
               <FaGithub className="text-primary hover:text-black" />
@@ -118,6 +126,7 @@ const HeroSection = () => {
             <a
               href="https://www.instagram.com/aria.bagaswara/"
               target="_blank"
+              rel="noopener noreferrer"
               className="text-lg md:text-2xl"
             >
               <FaInstagram className="text-primary hover:text-black" />
