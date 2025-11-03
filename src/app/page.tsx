@@ -10,18 +10,36 @@ import ServicesSection from "@/components/organism/ServicesSection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setLoading(false), 3000); // show loader for 2s
-    return () => clearTimeout(timer);
-  }, []);
+    // Step 1: Keep loader for 2.5s, then start fade-out animation
+    const timer1 = setTimeout(() => setFadeOut(true), 2500);
 
-  if (loading) return <Loader />; // <-- loader shown first render
+    // Step 2: Fully hide loader after fade-out completes (0.5s)
+    const timer2 = setTimeout(() => setLoading(false), 3000);
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    };
+  }, []);
 
   return (
     <div className="flex flex-col min-h-screen w-full overflow-hidden relative bg-gradient-to-br from-white via-sky-50 to-white">
+      {/* Loader with smooth fade out */}
+      {loading && (
+        <div
+          className={`fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-500 ease-in-out ${
+            fadeOut ? "opacity-0" : "opacity-100"
+          }`}
+        >
+          <Loader />
+        </div>
+      )}
+
       {/* Background Layer */}
-      <div className="absolute inset-0 opacity-35">
+      <div className="absolute inset-0 opacity-35 -z-10">
         <div
           className="absolute inset-0"
           style={{
@@ -52,12 +70,18 @@ export default function Home() {
         />
       </div>
 
-      {/* Page Sections */}
-      <Navbar />
-      <HeroSection />
-      <ServicesSection />
-      <ProjectsSection />
-      <FooterSection />
+      {/* Page Sections with smooth fade-in */}
+      <div
+        className={`transition-all duration-700 ease-out ${
+          loading ? "opacity-0 scale-95" : "opacity-100 scale-100"
+        }`}
+      >
+        <Navbar />
+        <HeroSection />
+        <ServicesSection />
+        <ProjectsSection />
+        <FooterSection />
+      </div>
     </div>
   );
 }

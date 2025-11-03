@@ -96,18 +96,37 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="w-full flex flex-col min-h-screen bg-secondary z-20"
+      className="relative w-full flex flex-col min-h-screen bg-secondary z-20"
     >
-      <div className="absolute inset-0 opacity-35">
+      {/* decorative background */}
+      <div className="absolute inset-0 -z-10">
         {/* Top-left ellipse */}
-        <div className="absolute top-2/4 left-3/4 w-10 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
+        <div className="absolute top-0 left-3/4 w-10 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
+
         {/* Bottom-right square */}
-        <div className="absolute top-3/4 right-36 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
+        <div className="absolute top-64 right-10 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
 
         {/* Bottom floating line */}
         <div className="absolute top-3/4 left-24 w-4 h-4 bg-sky-300 rotate-45 animate-pulse"></div>
+
+        <div className="absolute top-20 -left-20 opacity-40 pointer-events-none select-none">
+          <img
+            src="/pattern/pattern-2.svg"
+            alt="decorative background pattern"
+            className="w-[280px] md:w-[400px] lg:w-[500px] animate-float-slow"
+          />
+        </div>
+
+        {/* Pattern image */}
+        <div className="absolute bottom-0 -right-20 opacity-40 pointer-events-none select-none">
+          <img
+            src="/pattern/pattern-1.svg"
+            alt="decorative background pattern"
+            className="w-[280px] md:w-[400px] lg:w-[500px] animate-float-slow"
+          />
+        </div>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 mb-6 ">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 mb-6 ">
         <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-white via-[#00a2fa] to-white bg-clip-text text-transparent cursor-default">
           Selected Projects.
         </h2>
