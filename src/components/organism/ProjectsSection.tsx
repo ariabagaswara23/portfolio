@@ -96,7 +96,7 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="w-full flex flex-col min-h-screen bg-secondary"
+      className="w-full flex flex-col min-h-screen bg-secondary z-20"
     >
       <div className="absolute inset-0 opacity-35">
         {/* Top-left ellipse */}
