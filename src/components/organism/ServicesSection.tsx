@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { FaLaptopCode, FaPalette, FaPlug } from "react-icons/fa";
-import GradientText from "../GradientText";
 import AnimatedContent from "../AnimatedContent";
 
 const ServicesSection = () => {
@@ -10,14 +9,9 @@ const ServicesSection = () => {
       id="services"
       className="w-full min-h-screen relative bg-service-section"
     >
-      <GradientText
-        colors={["#003757", "#00a2fa", "#003757"]}
-        animationSpeed={0}
-        showBorder={false}
-        className="text-start font-bold text-4xl md:text-5xl lg:text-6xl py-3 cursor-default mx-0 mb-3 bg-transparent"
-      >
+      <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-[#003757] via-[#00a2fa] to-[#003757] bg-clip-text text-transparent cursor-default">
         What I Offer.
-      </GradientText>
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 py-6">
         <AnimatedContent
           distance={200}

@@ -37,20 +37,20 @@ const HeroSection = () => {
           rootMargin="-100px"
           textAlign="center"
         />
-        <div className="flex flex-row flex-wrap gap-1 md:gap-2 lg:gap-3 justify-center items-center text-4xl md:text-7xl lg:text-8xl font-bold pb-3">
+        <div className="flex flex-row flex-wrap gap-1 md:gap-2 lg:gap-3 justify-center items-center pb-3">
           <BlurText
             text="Aria"
             delay={1000}
             animateBy="words"
             direction="top"
-            className="text-primary"
+            className="text-primary text-4xl md:text-7xl lg:text-8xl font-bold"
           />
           <BlurText
             text="Bagaswara"
             delay={1000}
             animateBy="words"
             direction="top"
-            className="text-secondary"
+            className="text-secondary text-4xl md:text-7xl lg:text-8xl font-bold"
           />
         </div>
 

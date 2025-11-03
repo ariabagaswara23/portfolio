@@ -108,14 +108,9 @@ const ProjectsSection = () => {
         <div className="absolute top-3/4 left-24 w-4 h-4 bg-sky-300 rotate-45 animate-pulse"></div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 mb-6 ">
-        <GradientText
-          colors={["#ffffff", "#00a2fa", "#ffffff"]}
-          animationSpeed={10}
-          showBorder={false}
-          className="text-start font-bold text-4xl md:text-5xl lg:text-6xl py-3 cursor-default mx-0 mb-3 bg-transparent"
-        >
+        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-white via-[#00a2fa] to-white bg-clip-text text-transparent cursor-default">
           Selected Projects.
-        </GradientText>
+        </h2>
         <p className="text-center text-white mb-6">
           Click card to see the detail
         </p>
