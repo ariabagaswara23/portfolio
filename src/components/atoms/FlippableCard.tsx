@@ -47,30 +47,39 @@ const FlippableCard: React.FC<FlippableCardProps> = ({
       >
         {/* Front */}
         <div
-          className={`absolute inset-0 rounded-2xl shadow-lg overflow-hidden backface-hidden flex flex-col justify-around transition-shadow duration-300 hover:shadow-xl`}
-          style={{ backgroundColor: color }}
+          className={`
+    absolute inset-0 rounded-2xl overflow-hidden backface-hidden
+    flex flex-col justify-between
+    shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1
+  `}
+          style={{
+            background: `linear-gradient(145deg, ${color} 40%, ${toColor} 100%)`,
+          }}
         >
-          {/* Year Container */}
-          <div className="flex items-center justify-between backdrop-blur-sm mx-4">
-            <h2 className="text-6xl font-bold text-white text-start opacity-20">
+          {/* Top section */}
+          <div className="flex items-center justify-between px-5 py-4 bg-white/5 backdrop-blur-md">
+            <h2 className="text-6xl font-bold text-white/20 tracking-tight">
               {year}
             </h2>
-            <div className="w-8 h-8 bg-white opacity-20 rounded-sm"></div>
+            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-white/30 to-transparent" />
           </div>
-          {/* Image container */}
-          <div className="flex justify-center items-start p-4 h-1/2">
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+
+          {/* Image */}
+          <div className="relative flex justify-center items-center px-5">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden shadow-inner">
               <img
                 src={image}
                 alt={title}
-                className="w-full object-contain transition-transform duration-500 hover:scale-110 rounded-md"
+                className="w-full h-full object-contain transition-transform duration-700 hover:scale-105"
               />
+              {/* subtle gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent" />
             </div>
           </div>
-          {/* Title section */}
-          <div className="flex flex-col w-full justify-center backdrop-blur-sm">
-            <div className="w-full border-t-2 border-dashed border-white/30 mb-3" />
-            <h2 className="text-3xl font-semibold text-white text-end px-3">
+
+          {/* Bottom title */}
+          <div className="relative px-5 py-4 bg-white/10 backdrop-blur-sm border-t border-white/20">
+            <h2 className="text-2xl md:text-3xl font-semibold text-white text-right drop-shadow-sm">
               {title}
             </h2>
           </div>
