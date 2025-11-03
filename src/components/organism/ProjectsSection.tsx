@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import GradientText from "../GradientText";
 import FlippableCard from "../atoms/FlippableCard";
 import AnimatedContent from "../AnimatedContent";
 
