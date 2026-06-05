@@ -104,7 +104,7 @@ const ProjectsSection = () => {
         <div className="absolute top-[50%] left-[30%] w-[20rem] h-[20rem] bg-teal-500/20 rounded-full filter blur-[120px]"></div>
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 my-10 ">
-        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-white via-[#00a2fa] to-white bg-clip-text text-transparent cursor-default">
+        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-white bg-clip-text text-transparent cursor-default">
           Selected Projects.
         </h2>
         {/* <div className="flex flex-row w-full px-4 sm:px-12 lg:px-24  py-4 h-screen text-white">

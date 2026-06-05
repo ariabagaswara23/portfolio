@@ -17,7 +17,7 @@ const ServicesSection = () => {
       </div>
 
       <div className="relative z-10 w-full my-10">
-        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-[#003757] via-[#00a2fa] to-[#003757] bg-clip-text text-transparent cursor-default">
+        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-white bg-clip-text text-transparent cursor-default">
           What I Offer.
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 py-6">

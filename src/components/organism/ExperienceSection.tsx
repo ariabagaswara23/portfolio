@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from "react";
@@ -43,7 +44,7 @@ const ExperienceSection = () => {
       </div>
 
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-12 lg:px-24">
-        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-12 bg-gradient-to-r from-[#003757] via-[#00a2fa] to-[#003757] bg-clip-text text-transparent cursor-default">
+        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-12 bg-white bg-clip-text text-transparent cursor-default">
           Work Experience.
         </h2>
 

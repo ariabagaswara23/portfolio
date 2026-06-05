@@ -8,7 +8,6 @@ import {
   FaInstagram,
 } from "react-icons/fa";
 import SplitText from "../SplitText";
-import BlurText from "../BlurText";
 import CountUp from "../CountUp";
 
 const HeroSection = () => {
@@ -45,7 +44,7 @@ const HeroSection = () => {
           rootMargin="-100px"
           textAlign="center"
         />
-        <div className="flex flex-row flex-wrap gap-1 md:gap-2 lg:gap-3 justify-center items-center pb-3">
+        {/* <div className="flex flex-row flex-wrap gap-1 md:gap-2 lg:gap-3 justify-center items-center pb-3">
           <BlurText
             text="Aria"
             delay={1000}
@@ -60,7 +59,11 @@ const HeroSection = () => {
             direction="top"
             className="text-white text-5xl md:text-7xl lg:text-8xl font-bold"
           />
-        </div>
+        </div> */}
+
+        <h1 className="text-primary text-5xl md:text-7xl lg:text-8xl font-bold text-center pb-3">
+          Aria <span className="text-white">Bagaswara</span>
+        </h1>
 
         <h5 className="text-xl md:text-4xl lg:text-5xl text-white italic">
           <span className="text-primary">Front</span>end Developer
