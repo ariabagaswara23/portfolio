@@ -17,16 +17,24 @@ const HeroSection = () => {
       id="jumbotron"
       className="w-screen min-h-screen flex items-center justify-center relative overflow-hidden"
     >
-      <div className="absolute inset-0 opacity-35">
-        {/* Floating Shapes */}
-        <div className="absolute top-1/4 left-1/3 w-4 h-4 bg-sky-400 transform rotate-45 animate-pulse"></div>
-        <div className="absolute top-1/2 right-1/4 w-6 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-3 h-12 bg-sky-200 rounded-full transform rotate-12"></div>
+      {/* Background Blobs for Glassmorphism */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[10%] -left-[20%] md:top-[20%] md:-left-[10%] w-64 md:w-96 h-64 md:h-96 bg-primary rounded-full mix-blend-screen filter blur-[80px] md:blur-[128px] opacity-30 animate-pulse"></div>
+        <div className="absolute bottom-[10%] -right-[20%] md:bottom-[20%] md:-right-[10%] w-72 md:w-[40rem] h-72 md:h-[40rem] bg-primary rounded-full mix-blend-screen filter blur-[80px] md:blur-[128px] opacity-20"></div>
+      </div>
+
+      {/* Glassmorphic Edge Shapes */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        {/* Left Glass Shape */}
+        <div className="absolute top-[15%] -left-16 md:top-[25%] md:-left-20 w-48 md:w-80 h-48 md:h-80 bg-white/5 border border-white/10 rounded-[40px] md:rounded-[60px] transform -rotate-12 backdrop-blur-2xl shadow-[0_8px_32px_rgba(0,0,0,0.3)]"></div>
+        
+        {/* Right Glass Shape */}
+        <div className="absolute bottom-[10%] -right-16 md:bottom-[15%] md:-right-24 w-56 md:w-96 h-56 md:h-96 bg-white/5 border border-white/10 rounded-[40px] md:rounded-[60px] transform rotate-12 backdrop-blur-3xl shadow-[0_8px_32px_rgba(0,0,0,0.3)]"></div>
       </div>
       <div className="relative flex flex-col z-10 gap-1 md:gap-2 max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 h-screen justify-center items-center">
         <SplitText
           text={"Hi, I'm"}
-          className="text-1xl md:text-2xl lg:text-4xl text-secondary"
+          className="text-1xl md:text-2xl lg:text-4xl text-white"
           delay={100}
           duration={0.6}
           ease="power3.out"
@@ -43,21 +51,21 @@ const HeroSection = () => {
             delay={1000}
             animateBy="words"
             direction="top"
-            className="text-primary text-4xl md:text-7xl lg:text-8xl font-bold"
+            className="text-primary text-5xl md:text-7xl lg:text-8xl font-bold"
           />
           <BlurText
             text="Bagaswara"
             delay={1000}
             animateBy="words"
             direction="top"
-            className="text-secondary text-4xl md:text-7xl lg:text-8xl font-bold"
+            className="text-white text-5xl md:text-7xl lg:text-8xl font-bold"
           />
         </div>
 
-        <h5 className="text-xl md:text-4xl lg:text-5xl text-secondary italic">
+        <h5 className="text-xl md:text-4xl lg:text-5xl text-white italic">
           <span className="text-primary">Front</span>end Developer
         </h5>
-        <p className="mt-3 text-secondary text-xs md:text-sm text-center w-full md:w-3/4 lg:w-2/3">
+        <p className="mt-3 text-white text-xs md:text-sm text-center w-full md:w-3/4 lg:w-2/3">
           a passionate Frontend Developer who loves bringing ambitious digital
           ideas to life. I specialize in the modern React ecosystem, ensuring
           every project is delivered with clean code and great UX.
@@ -72,11 +80,11 @@ const HeroSection = () => {
               duration={1}
               className="text-primary text-xl md:text-2xl font-bold text-center"
             />
-            <span className="text-secondary text-center text-xs md:text-sm">
+            <span className="text-white text-center text-xs md:text-sm">
               Years of Experience
             </span>
           </div>
-          <div className="border-l-2 border-secondary h-8 mx-6"></div>
+          <div className="border-l-2 border-white h-8 mx-6"></div>
           <div className="flex flex-col">
             <CountUp
               from={0}
@@ -86,7 +94,7 @@ const HeroSection = () => {
               duration={5}
               className="text-primary text-xl md:text-2xl font-bold text-center"
             />
-            <span className="text-secondary text-center text-xs md:text-sm">
+            <span className="text-white text-center text-xs md:text-sm">
               Completed Projects
             </span>
           </div>
@@ -104,7 +112,7 @@ const HeroSection = () => {
               )
             }
             iconPosition="left"
-            className="flex items-center justify-center px-4 py-2 w-full md:w-fit bg-secondary text-white font-semibold rounded-md hover:text-primary disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="flex items-center justify-center px-4 py-2 w-full md:w-fit bg-primary text-white font-semibold rounded-md hover:text-secondary disabled:bg-gray-400 disabled:cursor-not-allowed"
           />
           <div className="flex flex-row gap-4 items-center">
             <a
@@ -113,7 +121,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="text-lg md:text-2xl"
             >
-              <FaLinkedinIn className="text-primary hover:text-black" />
+              <FaLinkedinIn className="text-primary hover:text-white" />
             </a>
             <a
               href="https://github.com/ariabagaswara23"
@@ -121,7 +129,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="text-lg md:text-2xl"
             >
-              <FaGithub className="text-primary hover:text-black" />
+              <FaGithub className="text-primary hover:text-white" />
             </a>
             <a
               href="https://www.instagram.com/aria.bagaswara/"
@@ -129,7 +137,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="text-lg md:text-2xl"
             >
-              <FaInstagram className="text-primary hover:text-black" />
+              <FaInstagram className="text-primary hover:text-white" />
             </a>
           </div>
         </div>

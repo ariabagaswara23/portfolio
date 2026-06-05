@@ -7,12 +7,20 @@ const ServicesSection = () => {
   return (
     <section
       id="services"
-      className="w-full min-h-screen relative bg-service-section"
+      className="w-full min-h-screen relative bg-[#0B1120] flex flex-col justify-center overflow-hidden"
     >
-      <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-[#003757] via-[#00a2fa] to-[#003757] bg-clip-text text-transparent cursor-default">
-        What I Offer.
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 py-6">
+      {/* Ambient background glows for smooth transition */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        <div className="absolute -top-[20%] left-1/2 -translate-x-1/2 w-[60rem] h-[40rem] bg-primary rounded-full mix-blend-screen filter blur-[150px] opacity-10"></div>
+        <div className="absolute top-[40%] -right-[10%] w-[30rem] h-[30rem] bg-teal-500 rounded-full mix-blend-screen filter blur-[128px] opacity-[0.08]"></div>
+        <div className="absolute -bottom-[20%] -left-[10%] w-[40rem] h-[40rem] bg-primary rounded-full mix-blend-screen filter blur-[150px] opacity-[0.05]"></div>
+      </div>
+
+      <div className="relative z-10 w-full my-10">
+        <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-[#003757] via-[#00a2fa] to-[#003757] bg-clip-text text-transparent cursor-default">
+          What I Offer.
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center items-center max-w-7xl mx-auto w-full px-4 sm:px-12 lg:px-24 py-6">
         <AnimatedContent
           distance={200}
           direction="vertical"
@@ -25,11 +33,11 @@ const ServicesSection = () => {
           threshold={0.2}
         >
           <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
-            <FaLaptopCode size={48} className="mb-4 text-secondary" />
+            <FaLaptopCode size={48} className="mb-4 text-white" />
             <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
               Web Development
             </h3>
-            <p className="text-xs lg:text-sm text-center text-secondary">
+            <p className="text-xs lg:text-sm text-center text-white">
               {" "}
               Building responsive and dynamic websites using modern technologies
               like React, Next.js, and TailwindCSS.
@@ -48,11 +56,11 @@ const ServicesSection = () => {
           threshold={0.2}
         >
           <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
-            <FaPalette size={48} className="mb-4 text-secondary" />
+            <FaPalette size={48} className="mb-4 text-white" />
             <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
               UI/UX Implementation
             </h3>
-            <p className="text-xs lg:text-sm text-center text-secondary">
+            <p className="text-xs lg:text-sm text-center text-white">
               {" "}
               Improving site loading speed, minimizing bundle size, and
               optimizing images, fonts, and assets for better user experience.
@@ -71,17 +79,18 @@ const ServicesSection = () => {
           threshold={0.2}
         >
           <div className="flex flex-col w-full items-center bg-custom-glass p-6 rounded-lg shadow-lg">
-            <FaPlug size={48} className="mb-4 text-secondary" />
+            <FaPlug size={48} className="mb-4 text-white" />
             <h3 className="text-base lg:text-xl text-primary font-bold mb-2">
               API Integration
             </h3>
-            <p className="text-xs lg:text-sm text-center text-secondary">
+            <p className="text-xs lg:text-sm text-center text-white">
               {" "}
               Seamlessly connecting frontend applications with RESTful APIs to
               deliver dynamic and interactive user experiences.
             </p>
           </div>
         </AnimatedContent>
+      </div>
       </div>
     </section>
   );

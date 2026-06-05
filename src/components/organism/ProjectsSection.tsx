@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import FlippableCard from "../atoms/FlippableCard";
+import ProjectCard from "../atoms/ProjectCard";
 import AnimatedContent from "../AnimatedContent";
 
 const projects = [
@@ -95,49 +95,23 @@ const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="relative w-full flex flex-col min-h-screen bg-secondary z-20"
+      className="relative w-full flex flex-col min-h-screen bg-[#0B1120] z-20"
     >
-      {/* decorative background */}
-      <div className="absolute inset-0 -z-10">
-        {/* Top-left ellipse */}
-        <div className="absolute top-0 left-3/4 w-10 h-6 border-2 border-sky-300 rounded-full animate-bounce"></div>
-
-        {/* Bottom-right square */}
-        <div className="absolute top-64 right-10 w-4 h-4 bg-sky-200 transform rotate-12 animate-pulse"></div>
-
-        {/* Bottom floating line */}
-        <div className="absolute top-3/4 left-24 w-4 h-4 bg-sky-300 rotate-45 animate-pulse"></div>
-
-        <div className="absolute top-20 -left-20 opacity-40 pointer-events-none select-none">
-          <img
-            src="/pattern/pattern-2.svg"
-            alt="decorative background pattern"
-            className="w-[280px] md:w-[400px] lg:w-[500px] animate-float-slow"
-          />
-        </div>
-
-        {/* Pattern image */}
-        <div className="absolute bottom-0 -right-20 opacity-40 pointer-events-none select-none">
-          <img
-            src="/pattern/pattern-1.svg"
-            alt="decorative background pattern"
-            className="w-[280px] md:w-[400px] lg:w-[500px] animate-float-slow"
-          />
-        </div>
+      {/* Elegant Glassmorphism Decorative Background */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+        <div className="absolute top-[10%] -left-[10%] w-[30rem] h-[30rem] bg-indigo-600/30 rounded-full filter blur-[150px] animate-pulse"></div>
+        <div className="absolute bottom-[20%] -right-[10%] w-[40rem] h-[40rem] bg-primary/20 rounded-full filter blur-[150px]"></div>
+        <div className="absolute top-[50%] left-[30%] w-[20rem] h-[20rem] bg-teal-500/20 rounded-full filter blur-[120px]"></div>
       </div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 mb-6 ">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-12 lg:px-24 py-10 my-10 ">
         <h2 className="text-center font-bold text-4xl md:text-5xl lg:text-6xl py-3 mx-0 mb-3 bg-gradient-to-r from-white via-[#00a2fa] to-white bg-clip-text text-transparent cursor-default">
           Selected Projects.
         </h2>
-        <p className="text-center text-white mb-6">
-          Click card to see the detail
-        </p>
         {/* <div className="flex flex-row w-full px-4 sm:px-12 lg:px-24  py-4 h-screen text-white">
           
         </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 w-full">
           {projects.map((project, index) => (
-            // <ProjectCard key={index} {...project} />
             <AnimatedContent
               key={index}
               distance={200}
@@ -150,7 +124,7 @@ const ProjectsSection = () => {
               scale={1}
               threshold={0.1}
             >
-              <FlippableCard key={index} {...project} flipOn="click" />
+              <ProjectCard {...project} />
             </AnimatedContent>
           ))}
         </div>
