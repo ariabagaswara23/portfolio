@@ -6,6 +6,23 @@ import AnimatedContent from "../AnimatedContent";
 
 const projects = [
   {
+    image: "/images/smartinenglish.png",
+    title: "SMART in ENGLISH",
+    description:"A responsive company profile platform built for an educational learning center to highlight course offerings and optimize engagement for learners and parents.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Supabase",
+      "Vercel",
+    ],
+    link: "https://smilesmartinenglish.my.id",
+    year: "2026",
+    color: "#94a3b8",
+
+  },
+  {
     image: "/images/posaja.png",
     title: "PosAja UMKM",
     description:
